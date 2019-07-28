@@ -21,7 +21,7 @@ public class Person extends PanacheEntity {
         return list("status", Status.Alive);
     }
 
-    public static void deleteStefs(){
-        delete("name", "Stef");
+    public static long deleteByName(String name){
+       return delete("name", name);
     }
 }
